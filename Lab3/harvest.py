@@ -5,7 +5,7 @@ import numpy
 import scipy
 import pandas as pd
 
-initial_val=0.75
+initial_val=0.25
 k = 1
 t_end=50*2
 step_size=0.1
@@ -21,7 +21,7 @@ quantity_c[0]=initial_val
 
 h1 = r*k/4 + 0.1
 h2 = r*k/4
-h3 = r*k/4 - 0.01
+h3 = r*k/4 - 0.1
 
 for i in range(1,total_steps):
     quantity_a[i] = quantity_a[i-1] + (r*quantity_a[i-1]*(1 - quantity_a[i-1]/k)-h1)*step_size
@@ -46,5 +46,5 @@ plt.xlabel('Time')
 plt.grid(b = True, color ='grey',  
         linestyle ='-.', linewidth = 0.5,  
         alpha = 0.6)
-plt.axhline(0.5)
+#plt.axhline(0.5)
 plt.show()
