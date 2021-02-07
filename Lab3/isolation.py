@@ -42,7 +42,7 @@ plt.axhline(th,color='green')
 #plt.axhline(k/2)
 #plt.axvline(0)
 plt.legend(['Initial Population=0.25','Initial Population=0.45','Initial Population=0.55','Threshold'])
-plt.title('Logistic Model')
+plt.title('Logistic Model with Isolation due to Death')
 plt.ylabel('Normalised Population')
 plt.xlabel('Time')
 plt.grid(b = True, color ='grey',  

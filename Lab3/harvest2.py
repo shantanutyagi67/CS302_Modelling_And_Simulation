@@ -5,14 +5,14 @@ import numpy
 import scipy
 import pandas as pd
 
-r=0.2
+r=1
 e1 = r + 0.1
 e2 = r
-e3 = r - 0.1
-initial_val=1-e3/r
+e3 = r - 0.5
+initial_val= 0.5
 k = 1
 e = 0.25
-t_end=100*2
+t_end=100
 step_size=0.1
 
 total_steps= int(t_end/step_size)+1 
@@ -40,9 +40,10 @@ x_axis=np.linspace(0,1,total_steps)
 plt.figure(1)
 plt.plot(x_axis,quantity_a,'navy' )
 plt.plot(x_axis,quantity_b,'red' )
-plt.plot(x_axis,quantity_c,'orange' )
 plt.axhline(1-e3/r)
-plt.legend(['e1>r','e2=r','e3<r','1-e3/r'])
+plt.plot(x_axis,quantity_c,'orange' )
+
+plt.legend(['e>1','e=1','Saturation Population','e<1'])
 plt.title('Proportional-Rate Harvesting')
 plt.ylabel('Normalised Population')
 plt.xlabel('Time')
